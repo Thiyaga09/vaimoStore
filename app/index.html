@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<title> Vaimo Store Test </title>
+</head>
+
+<body> 
+	<div class="wrapper top-border">
+		<div class="container">
+		
+			<header>
+				<div class="logo">
+					<a href="#"><img src="images/logo.png" border="0" title="Vaimo logo" alt="Vaimo logo"></a>
+				</div>
+				<div class="item-cart">
+					<span class="cart-item">3 items in your cart</span>
+					<span class="cart-price">€75.00</span>
+					<div id="minicart">
+						<div class="mini-cart-product-list">
+
+						</div>
+
+						<button class="pimary-btn">GO TO CHECKOUT</button>
+					</div>
+				</div>
+
+				<nav>
+					<ul>
+						<li><a href="#">WOMEN</a></li>
+						<li><a href="#">MEN</a></li>
+						<li><a href="#">JUNIOR</a></li>
+						<li><a href="#">ACCESSORIES</a></li>
+						<li class="level"><a href="#">COLLECTIONS</a>
+							<ul class="level-1">
+								<li><a href="#">2014</a><i class="fa">&#xf0dd;</i></li>
+								<li><a href="#">2013</a><i class="fa">&#xf0dd;</i></li>
+								<li><a href="#">2012</a><i class="fa">&#xf0dd;</i></li>
+								<li class="level-sub"><a href="#">2011</a><i class="fa">&#xf0dd;</i>
+									<ul class="level-2">
+										<li><a href="#">summer</a></li>
+										<li><a href="#">autumn</a></li>
+										<li><a href="#">winter</a></li>
+										<li><a href="#">spring</a></li>
+									</ul>
+								</li>								
+							</ul>
+						</li>
+						<li><a href="#" class="sale-highlight">SALE</a></li>
+						<li><a href="#">MY ACCOUNT</a></li>
+					</ul>
+					
+					<div class="mobile-nav">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</nav>
+				
+			</header>
+			
+			<section class="sale-banner">
+				<div class="sale-banner-img">
+					<img src="images/sale-img.png" bolder="0" title="Vaimo Store" alt="Vaimo Store" />
+					<div class="banner-content">
+						<h3>GET READY FOR THE AUTUMN</h3>
+						<p>WE HAVE PREPARED EVERYTHING FOR YOU!</p>
+					</div>
+				</div>
+				<div class="sale-banner-content">
+					<h1>This is Vaimo Store </h1>
+					<h2>YOUR ONE-STOP FASHION DESTINATION</h2>
+					<p>Shop from over 850 of the best brands, including VAIMO’s own label. Plus, get your daily fix of the freshest style, celebrity and music news.</p>
+				</div>
+			</section>
+			
+			<div class="favorite-txt"><span>OUR FAVOURITES</span></div>
+			
+			<section class="product-slider">
+				<ul>
+					<li>
+						<figure>
+							<img src="images/product1.png" bolder="0" title="Vaimo Store" alt="Vaimo Store" />
+						</figure>
+						<div class="product-name">BELT</div>
+						<div class="product-price">€ 79.00</div>
+						<button class="pimary-btn">Add to Cart</button>
+					</li>
+					<li>
+						<figure>
+							<img src="images/product2.png" bolder="0" title="Vaimo Store" alt="Vaimo Store" />
+						</figure>
+						<div class="product-name">Hat</div>
+						<div class="product-price"><span class="old-price">€ 79.00</span> <span class="sale-price">€ 79.00</span></div>
+						<button class="pimary-btn">Add to Cart</button>
+					</li>
+					<li>
+						<figure>
+							<img src="images/product3.png" bolder="0" title="Vaimo Store" alt="Vaimo Store" />
+						</figure>
+						<div class="product-name">Scarf</div>
+						<div class="product-price">€ 65.00</div>
+						<button class="pimary-btn">Add to Cart</button>
+					</li>
+					<li>
+						<figure>
+							<img src="images/product4.png" bolder="0" title="Vaimo Store" alt="Vaimo Store" />
+						</figure>
+						<div class="product-name">BAG</div>
+						<div class="product-price">€ 89.00</div>
+						<button class="pimary-btn">Add to Cart</button>
+					</li>
+				</ul>
+			</section>			
+		</div>
+
+		<footer class="wrapper">
+			<div class="container">
+				<ul>
+					<li><h4>Top Categories</h4></li>
+					<li><a href="">WOMEN</a></li>
+					<li><a href="">MEN</a></li>
+					<li><a href="">JUNIOR</a></li>
+					<li><a href="">ACCESSORIES</a></li>
+				</ul>
+				<ul>
+					<li><h4>Customer Service</h4></li>
+					<li><a href="">RETURNS</a></li>
+					<li><a href="">SHIPPING</a></li>
+					<li><a href="">ABOUT US</a></li>
+					<li><a href="">CONTACT US</a></li>
+				</ul>
+				<ul class="email-subscrip">
+					<li><h4>Top Categories</h4></li>
+					<li>	
+						<input type="email" name="email" id="email-val" placeholder="test@gmail.com" value="" >
+						<button id="emailSubscription" class="pimary-btn">SUBSCRIBE</button>
+						<div id="status"></div>
+					</li>
+				</ul>
+			</div>			
+		</footer>
+	</div>
+
+    <!-- ******************* Mini Cart Section ************************* -->
+    <script id="minicart-data" type="text/x-handlebars-template">
+        {{#each data}}
+            <section class="mini-cart-product">
+                <figure>
+                    <img src="{{image}}" bolder="0" title="Vaimo Store"  />
+                    <figcaption>
+                        <h4>{{product-name}}</h4>
+                        <div class="price">2 x € {{price}}</div>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </figcaption>
+                </figure>
+            </section>
+        {{/each}}
+    </script>
+
+	
+</body>
+</html>
+
+<!-- ******************* Scripts ************************* -->
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/handlebars-v4.0.5.js" ></script>
+<script src="js/global.js"></script>
